@@ -1,0 +1,19 @@
+{"id": 1, "genes": {"num_conv": 4, "conv_configs": [{"filters": 16, "kernel_size": 3}, {"filters": 32, "kernel_size": 3}, {"filters": 64, "kernel_size": 3}, {"filters": 32, "kernel_size": 7}], "pool_type": "avg", "activation": "leaky_relu", "fc_units": 512}, "fitness": 0.4725, "accuracy": 0.4880, "total_params": 759648}
+
+{"id": 2, "genes": {"num_conv": 3, "conv_configs": [{"filters": 16, "kernel_size": 5}, {"filters": 64, "kernel_size": 3}, {"filters": 128, "kernel_size": 5}], "pool_type": "max", "activation": "relu", "fc_units": 256}, "fitness": 0.5312, "accuracy": 0.5460, "total_params": 686432}
+
+{"id": 3, "genes": {"num_conv": 1, "conv_configs": [{"filters": 128, "kernel_size": 3}], "pool_type": "avg", "activation": "leaky_relu", "fc_units": 64}, "fitness": 0.4041, "accuracy": 0.4190, "total_params": 70912}
+
+{"id": 4, "genes": {"num_conv": 4, "conv_configs": [{"filters": 16, "kernel_size": 3}, {"filters": 32, "kernel_size": 3}, {"filters": 64, "kernel_size": 3}, {"filters": 32, "kernel_size": 7}], "pool_type": "avg", "activation": "leaky_relu", "fc_units": 128}, "fitness": 0.4548, "accuracy": 0.4690, "total_params": 482224}
+
+{"id": 5, "genes": {"num_conv": 1, "conv_configs": [{"filters": 16, "kernel_size": 3}], "pool_type": "avg", "activation": "leaky_relu", "fc_units": 512}, "fitness": 0.3677, "accuracy": 0.3820, "total_params": 103552}
+
+{"id": 6, "genes": {"num_conv": 1, "conv_configs": [{"filters": 16, "kernel_size": 3}], "pool_type": "avg", "activation": "leaky_relu", "fc_units": 512}, "fitness": 0.3666, "accuracy": 0.3810, "total_params": 103552}
+
+{"id": 7, "genes": {"num_conv": 4, "conv_configs": [{"filters": 16, "kernel_size": 3}, {"filters": 64, "kernel_size": 7}, {"filters": 16, "kernel_size": 7}, {"filters": 64, "kernel_size": 5}], "pool_type": "avg", "activation": "leaky_relu", "fc_units": 256}, "fitness": 0.5104, "accuracy": 0.5260, "total_params": 1294608}
+
+{"id": 8, "genes": {"num_conv": 3, "conv_configs": [{"filters": 128, "kernel_size": 3}, {"filters": 32, "kernel_size": 3}, {"filters": 16, "kernel_size": 5}], "pool_type": "avg", "activation": "relu", "fc_units": 64}, "fitness": 0.4415, "accuracy": 0.4570, "total_params": 241312}
+
+{"id": 9, "genes": {"num_conv": 1, "conv_configs": [{"filters": 16, "kernel_size": 3}], "pool_type": "avg", "activation": "leaky_relu", "fc_units": 128}, "fitness": 0.3821, "accuracy": 0.3970, "total_params": 64512}
+
+{"id": 10, "genes": {"num_conv": 4, "conv_configs": [{"filters": 128, "kernel_size": 3}, {"filters": 16, "kernel_size": 5}, {"filters": 64, "kernel_size": 7}, {"filters": 16, "kernel_size": 5}], "pool_type": "avg", "activation": "leaky_relu", "fc_units": 64}, "fitness": 0.5348, "accuracy": 0.5510, "total_params": 1360960}
