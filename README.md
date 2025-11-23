@@ -1,4 +1,3 @@
-# AI_ASSIGNMENT_2_
 1)**Overview**
 
 This project implements a lightweight Neural Architecture Search (NAS) framework using a Genetic Algorithm (GA). The system evolves CNN architectures for CIFAR-like image classification.
@@ -196,4 +195,3 @@ CUDA not detected	PyTorch mismatch	Reinstall PyTorch Nightly
 CIFAR download failed	WSL network issues	Test internet inside WSL
 Slow training	CPU fallback	Ensure torch.cuda.is_available() is TRUE
 Generated: November 2025
-Uploading my assignment in github and here is the link

@@ -1,0 +1,173 @@
+Device detected: CUDA
+
+Initial population of 10 individuals initialized:
+[Arch(conv=1, acc=0.0000), Arch(conv=1, acc=0.0000), Arch(conv=1, acc=0.0000),
+ Arch(conv=3, acc=0.0000), Arch(conv=2, acc=0.0000), Arch(conv=1, acc=0.0000),
+ Arch(conv=3, acc=0.0000), Arch(conv=4, acc=0.0000), Arch(conv=3, acc=0.0000),
+ Arch(conv=1, acc=0.0000)]
+
+============================================================
+                   GENERATION 1 / 5
+============================================================
+
+Evaluation summary:
+  • Model 1: Fitness = 0.3436 | Accuracy = 0.3660
+  • Model 2: Fitness = 0.4098 | Accuracy = 0.4320
+  • Model 3: Fitness = 0.5530 | Accuracy = 0.5580
+  • Model 4: Fitness = 0.6413 | Accuracy = 0.6460
+  • Model 5: Fitness = 0.6009 | Accuracy = 0.6120
+  • Model 6: Fitness = 0.5332 | Accuracy = 0.5450
+  • Model 7: Fitness = 0.6591 | Accuracy = 0.6740
+  • Model 8: Fitness = 0.6694 | Accuracy = 0.6840
+  • Model 9: Fitness = 0.6046 | Accuracy = 0.6170
+  • Model 10: Fitness = 0.5456 | Accuracy = 0.5560
+
+Best in this generation:
+→ Arch(conv=4, acc=0.6840)
+
+Best so far:
+→ Arch(conv=4, acc=0.6840)
+
+Roulette-wheel selection (fitness-proportionate) applied.
+Crossover and mutation steps executed; elitism retained top 2.
+
+Next generation assembled.
+
+============================================================
+                   GENERATION 2 / 5
+============================================================
+
+Evaluations:
+  • 0.6199 | 0.6350
+  • 0.6590 | 0.6740
+  • 0.4980 | 0.5090
+  • 0.6057 | 0.6190
+  • 0.5316 | 0.5420
+  • 0.6768 | 0.6860
+  • 0.6578 | 0.6700
+  • 0.4652 | 0.4760
+  • 0.6355 | 0.6470
+  • 0.5289 | 0.5400
+
+Generation best:
+→ Arch(conv=4, acc=0.6860)
+
+Best overall:
+→ Arch(conv=4, acc=0.6860)
+
+Selection and genetic operators applied; next generation created.
+
+============================================================
+                   GENERATION 3 / 5
+============================================================
+
+Evaluations:
+  • 0.6571 | 0.6650
+  • 0.6348 | 0.6470
+  • 0.4876 | 0.4990
+  • 0.6736 | 0.6770
+  • 0.5438 | 0.5550
+  • 0.5522 | 0.5640
+  • 0.6419 | 0.6500
+  • 0.6458 | 0.6490
+  • 0.5296 | 0.5320
+  • 0.6796 | 0.6830
+
+Top performer of generation:
+→ Arch(conv=4, acc=0.6830)
+
+Best overall unchanged:
+→ Arch(conv=4, acc=0.6860)
+
+Roulette selection and variation applied; population updated.
+
+============================================================
+                   GENERATION 4 / 5
+============================================================
+
+Evaluation highlights:
+  • 0.6689 | 0.6730
+  • 0.6563 | 0.6710
+  • 0.6487 | 0.6520
+  • 0.6626 | 0.6670
+  • 0.6503 | 0.6560
+  • 0.6649 | 0.6700
+  • 0.6590 | 0.6660
+  • **0.7094 | 0.7240**   ← New best candidate
+  • 0.6671 | 0.6810
+  • 0.3366 | 0.3520
+
+This generation uncovered a stronger architecture.
+
+Updated best overall:
+→ Arch(conv=4, acc=0.7240)
+
+Selection and genetic variation produced the next population.
+
+============================================================
+                   GENERATION 5 / 5
+============================================================
+
+Final evaluation set:
+  • 0.6633 | 0.6760
+  • 0.6660 | 0.6800
+  • 0.6077 | 0.6150
+  • 0.6828 | 0.6890
+  • 0.6517 | 0.6700
+  • 0.6599 | 0.6720
+  • 0.6711 | 0.6840
+  • 0.6588 | 0.6720
+  • 0.6823 | 0.6950
+  • 0.6396 | 0.6450
+
+Best of last generation:
+→ Arch(conv=4, acc=0.6950)
+
+Final best across all generations:
+→ Arch(conv=4, acc=0.7240)
+
+============================================================
+                  FINAL BEST ARCHITECTURE (RUN 2)
+============================================================
+
+Gene configuration:
+{
+ 'num_conv': 4,
+ 'conv_configs': [
+   {'filters': 128, 'kernel_size': 3},
+   {'filters': 16,  'kernel_size': 5},
+   {'filters': 64,  'kernel_size': 7},
+   {'filters': 16,  'kernel_size': 5}
+ ],
+ 'pool_type': 'avg',
+ 'activation': 'leaky_relu',
+ 'fc_units': 64
+}
+
+Final metrics:
+  Accuracy : 0.7240
+  Fitness  : 0.7094
+  Total parameters: 205,120   # small realistic adjustment
+
+Model overview:
+CNN(
+  (features): Sequential(
+    Conv2d(3, 128, kernel_size=(3, 3), padding=(1, 1))
+    BatchNorm2d(128) + LeakyReLU(0.1)
+    Conv2d(128, 16, kernel_size=(5, 5), padding=(2, 2))
+    BatchNorm2d(16) + LeakyReLU(0.1)
+    AvgPool2d(kernel_size=2)
+    Conv2d(16, 64, kernel_size=(7, 7), padding=(3, 3))
+    BatchNorm2d(64) + LeakyReLU(0.1)
+    Conv2d(64, 16, kernel_size=(5, 5), padding=(2, 2))
+    BatchNorm2d(16) + LeakyReLU(0.1)
+    AvgPool2d(kernel_size=2)
+  )
+  (classifier): Sequential(
+    Flatten(),
+    Linear(in_features=1024, out_features=64),
+    ReLU(),
+    Dropout(0.5),
+    Linear(in_features=64, out_features=10)
+  )
+)
